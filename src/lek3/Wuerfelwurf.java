@@ -1,7 +1,9 @@
-public class Würfelwurf {
+package lek3;
+
+public class Wuerfelwurf {
     public static void main(String[] args) {
-        double wuerfel = Math.floor(Math.random() * 6 + 1);
-        switch ((int)wuerfel) {
+        int wuerfel = (int) (Math.random() * 6) + 1;
+        switch (wuerfel) {
             case 1: {
                 System.out.println("Eins gewürfelt");
                 break;

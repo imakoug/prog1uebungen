@@ -1,11 +1,13 @@
+package lek4;
+
 import java.util.Scanner;
 
 public class Querprodukt {
     public static int querProdukt(int n) {
         int product = 1;
         while (n > 0) {
-            int digit = n % 10;
-            product *= digit;
+            int zif = n % 10;
+            product *= zif;
             n /= 10;
         }
         return product;
@@ -16,10 +18,10 @@ public class Querprodukt {
         while (true) {
             System.out.print("Geben Sie bitte eine Zahl ein: ");
             int n = sc.nextInt();
-            if (n <= 0 || n > 1000000) {
-                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "FEHLER" + ConsoleColors.RESET + " – Zahl ist ungültig.");
+            if (n <= 0 || n >= 1000000) {
+                System.out.println("FEHLER – Zahl ist ungueltig.");
             } else {
-                System.out.println("Das Querprodukt der Zahl " + n + " beträgt " + querProdukt(n));
+                System.out.println("Das Querprodukt der Zahl " + n + " betraegt " + querProdukt(n));
                 break;
             }
         }

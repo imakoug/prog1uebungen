@@ -1,3 +1,5 @@
+package lek3;
+
 import java.util.Scanner;
 
 public class Schaltjahr {
